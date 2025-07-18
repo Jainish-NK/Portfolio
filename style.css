@@ -1,25 +1,28 @@
 /* --- Variables --- */
 :root {
-    --page-bg: #0C1E32; /* Slightly lighter base background for the page */
-    --dark-navy: #0A192F; /* This will now be the background for common content sections */
-    --light-navy: #112240; /* Background for cards (e.g., skill cards, about me cards) */
-    --light-slate: #CCD6F6; /* Brighter white/light gray text */
-    --slate: #8892B0; /* Standard gray text */
+    --page-bg: #101624; /* Deep blue background */
+    --dark-navy: #1a2238; /* Deep indigo/navy for sections */
+    --light-navy: #28304a; /* Card backgrounds: blue/indigo */
+    --light-slate: #f3f6fa; /* Crisp, cool white/blue text */
+    --slate: #8fd6e7; /* Muted cyan/blue for secondary text */
 
-    --green-accent: #d57157; /* Primary accent color (e.g., hover states) */
-    --gradient-start: #85193C; /* Start color for purple-pink gradients */
-    --gradient-end: #d46d46;   /* End color for purple-pink gradients */
-    --purple-text: #C83F12; /* Specific purple for "My Journey" title */
-    --blue-text: #cbbb25; /* DeepSkyBlue for "Current Status" title */
+    --green-accent: #00e6b8; /* Teal-cyan accent */
+    --magenta-accent: #e14eca; /* Magenta accent for highlights */
+    --gold-accent: #ffd86b; /* Gold accent for premium highlights */
+    --gradient-start: #3a8dde; /* Gradient start: cool blue */
+    --gradient-mid: #7f53ac;   /* Gradient mid: purple/indigo */
+    --gradient-end: #00e6b8;   /* Gradient end: teal/cyan */
+    --purple-text: #a259ff; /* Neon purple for titles */
+    --blue-text: #00e6b8; /* Teal-cyan for status */
 
-    /* Skill Icon Background Colors (matched to new screenshot) */
-    --skill-blue-bg: #2196F3; /* Programming Languages - Blue */
-    --skill-green-bg: #4CAF50; /* Frameworks & Libraries - Green */
-    --skill-orange-bg: #FF9800; /* AI & ML - Orange */
-    --skill-red-pink-bg: #F44336; /* Soft Skills - Red/Pink */
+    /* Skill Icon Background Colors (mixed cool palette) */
+    --skill-blue-bg: #3a8dde; /* Programming Languages - Blue */
+    --skill-green-bg: #00bfae; /* Frameworks & Libraries - Teal */
+    --skill-orange-bg: #ffb86c; /* AI & ML - Soft orange */
+    --skill-red-pink-bg: #e14eca; /* Soft Skills - Magenta */
 
     /* Darker color for footer background */
-    --darker-footer-bg: #081525; /* A slightly darker navy/black for the footer */
+    --darker-footer-bg: #151a2e; /* Deep navy/black for the footer */
 }
 
 /* --- Base Styles --- */
@@ -34,11 +37,11 @@ html {
 }
 
 body {
-    background-color: var(--page-bg); /* Use the new lighter base background */
+    background-color: var(--page-bg);
     color: var(--light-slate);
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll from radial gradients */
+    overflow-x: hidden;
 }
 
 a {
@@ -92,10 +95,10 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(10, 25, 47, 0.9); /* Dark navy with transparency */
+    background-color: rgba(26, 34, 56, 0.92);
     backdrop-filter: blur(8px); /* Frosted glass effect */
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 230, 184, 0.08);
 }
 
 .navbar-content {
@@ -114,7 +117,7 @@ body::before {
     color: inherit; /* Inherit color, then apply gradient to span */
 }
 .gradient-text-logo {
-    background-image: linear-gradient(to right, #FCF259, #C5172E, #C5172E); /* Gradient colors from screenshot */
+    background-image: linear-gradient(90deg, #ffd86b, #00e6b8, #7f53ac, #e14eca);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -149,7 +152,7 @@ body::before {
 
 /* Active Nav Link Styling */
 .nav-link.active {
-    color: var(--green-accent); /* Highlight active link with green */
+    color: var(--magenta-accent); /* Highlight active link with green */
     font-weight: 600; /* Make it a bit bolder when active */
 }
 
@@ -248,7 +251,7 @@ body::before {
     transform: translateX(-50%);
     width: 60px; /* Width of the underline */
     height: 4px; /* Thickness of the underline */
-    background-image: linear-gradient(to right, #C5172E, #C5172E, #FCF259); /* Gradient colors */
+    background-image: linear-gradient(90deg, #ffd86b, #00e6b8, #e14eca); /* Gradient colors */
     border-radius: 2px;
 }
 
@@ -292,7 +295,7 @@ body::before {
 .hero-roles {
     font-size: 1.5rem; /* REDUCED FONT SIZE */
     font-weight: 500;
-    color: var(--green-accent); /* Make these green */
+    color: var(--magenta-accent); /* Make these green */
     min-height: 3.5rem; /* Ensure consistent height for typing multiple lines */
     line-height: 1.2;
     margin-bottom: 25px;
@@ -306,7 +309,7 @@ body::before {
 }
 
 .gradient-text {
-    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    background-image: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -356,10 +359,10 @@ body::before {
 }
 
 .btn-primary {
-    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-    color: white;
+    background-image: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    color: #fff;
     border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 230, 184, 0.18);
 }
 
 .btn-primary:hover {
@@ -495,8 +498,8 @@ body::before {
 /* Icon for Current Status with Gradient Background */
 .status-icon {
     font-size: 1.6rem; /* Slightly reduced icon size */
-    color: white; /* Icon color should be white on gradient background */
-    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: #fff; /* Icon color should be white on gradient background */
+    background-image: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     padding: 10px; /* Reduced padding */
     border-radius: 8px; /* Slightly rounded corners for the icon container */
     display: flex; /* To center the icon inside its background */
@@ -507,7 +510,7 @@ body::before {
 
 /* Languages Card with Gradient Background */
 .about-card.languages-card {
-    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    background-image: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
     padding: 25px; /* Keep padding consistent with other cards */
     color: var(--light-slate); /* Ensure text is readable on gradient background */
 }
@@ -530,7 +533,7 @@ body::before {
 }
 
 .language-tag {
-    background-color: rgba(10, 25, 47, 0.5); /* Darker, slightly transparent background for tags on gradient */
+    background-color: rgba(26, 34, 56, 0.5); /* Darker, slightly transparent background for tags on gradient */
     color: var(--light-slate); /* Light text for tags */
     padding: 5px 12px; /* Reduced padding */
     border-radius: 18px; /* Adjusted border-radius */
@@ -633,7 +636,7 @@ body::before {
 
 /* --- Projects Section --- */
 .gradient-text-comingSoon{
-    background-image: linear-gradient(to right, #FCF259, #C5172E, #C5172E); /* Gradient colors from screenshot */
+    background-image: linear-gradient(90deg, #ffd86b, #00e6b8, #e14eca);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -760,7 +763,7 @@ body::before {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--green-accent);
+    color: var(--magenta-accent);
     font-size: 1.1rem;
     font-weight: 500;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -779,15 +782,15 @@ body::before {
 .contact-link-card:hover {
     transform: translateY(-5px);
     background-color: var(--dark-navy);
-    color: var(--green-accent);
+    color: var(--gold-accent);
 }
 .contact-link-card:hover span {
-    color: var(--green-accent);
+    color: var(--gold-accent);
 }
 
 /* --- Footer --- */
 .footer {
-    background-color: var(--darker-footer-bg); /* Use the darker variable */
+    background-color: var(--darker-footer-bg);
     backdrop-filter: blur(8px); /* Keep backdrop filter for consistency */
     border-top: 1px solid var(--light-navy); /* Main border for top section */
     padding: 40px 20px;
@@ -847,7 +850,7 @@ body::before {
 }
 
 .github-link:hover {
-    color: var(--green-accent);
+    color: var(--magenta-accent);
 }
 
 
@@ -874,7 +877,7 @@ body::before {
 }
 
 .fixed-bottom-social-links a:hover {
-    color: var(--green-accent); /* Hover effect */
+    color: var(--magenta-accent); /* Hover effect */
     transform: translateY(-3px);
 }
 
